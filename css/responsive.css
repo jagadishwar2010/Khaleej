@@ -1,0 +1,301 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 386px) {
+    .download-mobile {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 200px) {
+    heading {
+        font-size: 2rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 936px) {
+    .container6 {
+        flex-direction: column !important;
+    }
+
+    .vl {
+        display: none;
+    }
+
+    .social-media {
+        text-align: center;
+        margin: auto !important;
+    }
+
+    .follow-us-text {
+        text-align: center;
+        margin-right: -1rem !important;
+    }
+
+    .text-box {
+        margin-top: 4vh !important;
+    }
+
+    .logo-box {
+        margin-top: 0px !important;
+    }
+
+    .f-15 {
+        padding-bottom: 0px !important;
+    }
+
+    .address {
+        padding-bottom: 0px !important;
+    }
+
+    .follow-us {
+        padding-top: 2vh !important;
+    }
+
+    .contact-us-box {
+        margin-top: 4vh !important;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .heading {
+        font-size: 50px !important;
+    }
+
+    h1 {
+        font-size: 26px !important;
+    }
+
+    .f-40 {
+        font-size: 30px !important;
+    }
+
+    .number {
+        font-size: 30px !important;
+    }
+
+    .big-logo {
+        display: none;
+    }
+    .contact-us-form {
+        margin-right: auto !important;
+        width: 75% !important;
+    }
+
+    .container10 {
+        margin-top: 35vh;
+    }
+
+}
+
+@media only screen and (max-width: 1366px) {
+    .hr {
+        right: 68px !important;
+    }
+
+}
+
+@media only screen and (max-width: 470px) {
+    .heading {
+        font-size: 40px !important;
+    }
+
+    h1 {
+        font-size: 20px !important;
+    }
+
+    .f-40 {
+        font-size: 25px !important;
+    }
+
+    .number {
+        font-size: 25px !important;
+    }
+
+    .contact-us-form {
+        width: 75% !important;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+    .sub-menu {
+        padding-top: 0px !important;
+        padding-left: 0.45rem !important;
+        width: auto !important;
+    }
+
+    .logistics-solutions {
+        max-width: 25vw !important;
+    }
+
+    .logistics-dropdown-left > .dropdown-menu-items {
+        padding-bottom: 0px !important;
+    }
+
+    .logistics {
+        display: block !important;
+    }
+
+    .number {
+        font-size: 40px !important;
+    }
+
+    .home-logo-text {
+        display: none;
+    }
+
+    .optimization-text {
+        padding-left: 4% !important;
+        padding-right: 4% !important;
+    }
+
+    .manifest {
+        margin-top: 2rem !important;
+    }
+
+    .margin-bottom-2 {
+        margin-bottom: 2em !important;
+    }
+
+    .statistics-block {
+        flex-direction: column !important;
+    }
+
+    .container8 .d-flex {
+        display: block !important;
+    }
+
+    .d-flex .w-50{
+        width: 100% !important;
+    }
+
+    .container2 {
+        margin-top: 10rem !important;
+    }
+
+    .warehouse-box img{
+        margin: 5px;
+    }
+
+    .warehouse-box-right {
+        margin-top: 5%;
+    }
+
+}
+
+
+@media only screen and (min-width: 470px) {
+    h2 {
+        font-size: 16px !important;
+    }
+
+    label {
+        font-size: 16px !important;
+    }
+
+    heading {
+        font-size: 50px !important;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    h2 {
+        font-size: 20px !important;
+    }
+
+    label {
+        font-size: 20px !important;
+    }
+
+    heading {
+        font-size: 57px !important;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #invoice_img {
+        padding-left: 0px !important;
+    }
+
+    .logistics-solutions {
+        max-width: 45vw !important;
+    }
+
+    h2 {
+        font-size: 24px !important;
+    }
+
+    label {
+        font-size: 24px !important;
+    }
+
+    heading {
+        font-size: 64px !important;
+    }
+
+    .warehouse-box img{
+        padding-left: 0 !important;
+    }
+
+    .warehouse-box .text-left {
+        padding-right: 2rem !important;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .dropdown span {
+        font-size: 11px !important;
+    }
+
+    .download-mobile {
+        font-size: 11px !important;
+    }
+
+    .number {
+        font-size: 50px !important;
+    }
+
+    .logistics-dropdown-left {
+        width: 22vw !important;
+    }
+
+    .logistics-dropdown-right {
+        width: 23vw !important;
+    }
+}
+
+@media (min-width:1113px) and (max-width: 1288px) {
+    .shipping-solutions {
+        max-width: 18vw !important;
+    }
+}
+
+@media (min-width:992px) and (max-width: 1110px) {
+    .shipping-solutions {
+        max-width: 22vw !important;
+    }
+}
+
+@media (min-width:992px) and (max-width: 1288px) {
+    .office-essentials {
+        max-width: 20vw !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .logistics-dropdown-left {
+        width: 19vw !important;
+    }
+    .logistics-dropdown-right {
+        width: 19vw !important;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
