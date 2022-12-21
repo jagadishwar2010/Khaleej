@@ -55,7 +55,7 @@
                             </svg>
                         </span>
                                 <div class="dropdown-menu logistics-solutions">
-                                    <div class="dropdown-menu-left">
+                                    <div class="dropdown-menu-left" style="background-color: #EDEADE; border-radius: 10px">
                                         <div class="logistics" style="display: flex">
                                             <div class="logistics-dropdown-left" style="width: 17vw">
                                                 <p class="sub-menu" style="padding-top: 1rem">Transport Management</p>
@@ -448,16 +448,28 @@
 <script>
     function send_email() {
         Email.send({
-            Host : "send.smtp.mailtrap.io",
-            Username : "api",
-            Password : "ae3a69ff6f8517f96f404c160d6cdb64",
+            Host : "smtp.elasticmail.com",
+            Username : "reachus@khaleejbs.com",
+            Password : "C854E19F7AFC058B0E55EC19FCF881686444",
             To : 'jagadishwar2010@gmail.com',
-            From : "reachus@khaleejbs.com",
-            Subject : "This is the subject",
-            Body : "And this is the body"
+            From : 'reachus@khaleejbs.com',
+            Subject : "New Query from Client",
+            Body : "Test"
         }).then(
             message => alert(message)
         );
+
+        // Email.send({
+        //     Host : "send.smtp.mailtrap.io",
+        //     Username : "api",
+        //     Password : "ae3a69ff6f8517f96f404c160d6cdb64",
+        //     To : 'jagadishwar2010@gmail.com',
+        //     From : "reachus@khaleejbs.com",
+        //     Subject : "This is the subject",
+        //     Body : "And this is the body"
+        // }).then(
+        //     message => alert(message)
+        // );
     }
 
     // $(window).on('load resize', function () {
