@@ -341,32 +341,35 @@
             <a href="index.html"><img src="images/logo%201.png" alt="" style="width: 60%; height: auto"></a>
             <h2>Our job is not just to give customers what they want, but what they didn’t know they wanted.</h2>
         </div>
-        <div class="contact-us-form">
-            <div class="contact-us-form-title">
-                <h2>Contact Us</h2>
+            <div class="contact-us-form">
+                <div class="contact-us-form-title">
+                    <h2>Contact Us</h2>
+                </div>
+                <div class="name" style="margin-bottom: 1em !important;">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" style="padding-left: 10px">
+                </div>
+                <div class="phone" style="margin-bottom: 1em !important;">
+                    <label for="phone">Phone Number</label>
+                    <input type="number" id="phone" style="padding-left: 10px">
+                </div>
+                <div class="company" style="margin-bottom: 1em !important;">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" style="padding-left: 10px">
+                </div>
+                <div class="email" style="margin-bottom: 1em !important;">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" style="padding-left: 10px">
+                </div>
+                <div class="country" style="margin-bottom: 1.25em !important;">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" style="padding-left: 10px">
+                </div>
+                <button type="submit" class="submit" onclick="send_email()" >SUBMIT</button>
+                <div class="submitted" style="display: none; color: green">
+                    Form Submitted
+                </div>
             </div>
-            <div class="name" style="margin-bottom: 1em !important;">
-                <label for="name">Name</label>
-                <input type="text" id="name">
-            </div>
-            <div class="phone" style="margin-bottom: 1em !important;">
-                <label for="phone">Phone Number</label>
-                <input type="number" id="phone">
-            </div>
-            <div class="company" style="margin-bottom: 1em !important;">
-                <label for="company">Company</label>
-                <input type="text" id="company">
-            </div>
-            <div class="email" style="margin-bottom: 1em !important;">
-                <label for="email">Email</label>
-                <input type="text" id="email">
-            </div>
-            <div class="country" style="margin-bottom: 1.25em !important;">
-                <label for="country">Country</label>
-                <input type="text" id="country">
-            </div>
-            <button type="submit" onclick="send_email()" >SUBMIT</button>
-        </div>
     </div>
     <div class="container5 pt-46">
         <h1 class="f-40">Our Community</h1>
@@ -443,33 +446,52 @@
     </div>
 </div>
 <script defer="" src="js/jQuery.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
+<!--<script src="https://smtpjs.com/v3/smtp.js"></script>-->
 <!--<script defer="" src="js/jquery-3.1.0.js"></script>-->
 <script>
     function send_email() {
-        Email.send({
-            Host : "smtp.elasticmail.com",
-            Username : "reachus@khaleejbs.com",
-            Password : "C854E19F7AFC058B0E55EC19FCF881686444",
-            To : 'jagadishwar2010@gmail.com',
-            From : 'reachus@khaleejbs.com',
-            Subject : "New Query from Client",
-            Body : "Test"
-        }).then(
-            message => alert(message)
-        );
+        $('.submit').fadeTo('slow', .6);
+        $('.submit').css('pointerEvents', 'none');
+        var name = $('#name').val();
+        var phone = $('#phone').val();
+        var company = $('#company').val();
+        var email = $('#email').val();
+        var country = $('#country').val();
 
-        // Email.send({
-        //     Host : "send.smtp.mailtrap.io",
-        //     Username : "api",
-        //     Password : "ae3a69ff6f8517f96f404c160d6cdb64",
-        //     To : 'jagadishwar2010@gmail.com',
-        //     From : "reachus@khaleejbs.com",
-        //     Subject : "This is the subject",
-        //     Body : "And this is the body"
-        // }).then(
-        //     message => alert(message)
-        // );
+        // Submit the form data using AJAX
+        $.ajax({
+            type: 'post',
+            url: 'send_mail.php',
+            contentType: "application/json",
+            data: {
+                name: name,
+                email: email,
+                phone: phone,
+                company: company,
+                country: country,
+            },
+            success: function(response) {
+                // Display a success message to the user
+                $('.submitted').show();
+                setTimeout(function() {
+                    $('.submitted').css('display', 'none');
+                }, 3000);
+
+                $('.submit').fadeTo('slow', .6);
+                $('.submit').css('pointerEvents', 'none');
+
+                // Clear the form fields
+                $('#name').val(null);
+                $('#phone').val(null);
+                $('#email').val(null);
+                $('#company').val(null);
+                $('#country').val(null);
+            },
+            error: function() {
+                // Display an error message to the user
+                alert('There was an error submitting the form.');
+            }
+        });
     }
 
     // $(window).on('load resize', function () {
